@@ -3,7 +3,7 @@
 A fully free-tier optimized healthcare portal connecting patients and doctors using Streamlit, Firebase, and the Gemini 2.5 AI.
 
 ## Features
-* **🧑‍⚕️ Patient Portal:** Submit health metrics, interact with a Gemini-powered AI Health Assistant, and view doctor feedback.
+* **🧑‍⚕️ Patient Portal:** Submit health metrics, and view doctor feedback.
 * **🩺 Doctor Dashboard:** Secure login, auto-sorted patient risk queue (High/Moderate/Low), and clinical note-taking.
 * **🧠 AI Risk Engine:** Automatically calculates health risk scores based on pain levels, steps, sleep, and mood.
 
