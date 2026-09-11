@@ -10,6 +10,7 @@ load_dotenv()
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from firebase_config.firebase_connection import connect_to_firestore
+from ui.react_shell import render_react_shell
 
 # ================= FIREBASE =================
 db = connect_to_firestore()
@@ -20,6 +21,11 @@ if not db:
 
 # ================= PAGE CONFIG =================
 st.set_page_config(page_title="Doctor Dashboard", layout="wide")
+render_react_shell(
+    title="Careflow clinical workspace",
+    subtitle="Prioritize patient updates and keep care moving.",
+    role="Doctor workspace",
+)
 st.title("🩺 Doctor Dashboard")
 
 # ================= FETCH FUNCTIONS =================

@@ -18,6 +18,7 @@ load_dotenv()
 
 from firebase_config.firebase_connection import connect_to_firestore
 from utils.risk_calculator import ai_health_risk_score
+from ui.react_shell import render_react_shell
 
 # ================= FIREBASE =================
 db = connect_to_firestore()
@@ -72,6 +73,11 @@ def hash_password(password):
 
 # ================= AUTHENTICATION LAYER =================
 st.set_page_config(page_title="Patient Portal")
+render_react_shell(
+    title="Careflow patient portal",
+    subtitle="Your private health journey, presented clearly.",
+    role="Patient workspace",
+)
 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
